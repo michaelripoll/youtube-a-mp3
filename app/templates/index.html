@@ -1,0 +1,17 @@
+{% extends './layout.html' %}
+
+{% block title %}{{ data.titulo }}{% endblock %}
+
+{% block body %}
+<h1>{{ data.subtitulo }}</h1>
+<h3>¿Necesitas descargar un video de youtube en formato mp3?</h3>
+<p>Este es un convertidor online y gratis de YouTube que te permite descargar un video de youtube como un archivo mp3.</p>
+
+<form action="/converter" method="post">
+    <label>Ingresar Url:</label>
+    <input type="text" name="url" placeholder="Pegar url del Video">
+
+    <button type="submit">Convertir</button>
+</form>
+
+{% endblock %}
